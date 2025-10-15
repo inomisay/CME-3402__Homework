@@ -1,0 +1,24 @@
+digraph DecisionTree {
+  fontname="Helvetica,Arial,sans-serif";
+  node [fontname="Helvetica,Arial,sans-serif", shape=box, style="filled,rounded", color=lightblue2, fontcolor=black];
+  edge [fontname="Helvetica,Arial,sans-serif", color=gray50, fontcolor=gray20];
+  rankdir=TB;
+  label="Decision Tree";
+  labelloc=top;
+  fontsize=20;
+  node0 [label="outlook"];
+  node1 [label="windy"];
+  node2 [label="Decision: yes", fillcolor=lightgreen];
+  node1 -> node2 [label="FALSE"];
+  node3 [label="Decision: no", fillcolor=lightgreen];
+  node1 -> node3 [label="TRUE"];
+  node0 -> node1 [label="rainy"];
+  node4 [label="humidity"];
+  node5 [label="Decision: no", fillcolor=lightgreen];
+  node4 -> node5 [label="high"];
+  node6 [label="Decision: yes", fillcolor=lightgreen];
+  node4 -> node6 [label="normal"];
+  node0 -> node4 [label="sunny"];
+  node7 [label="Decision: yes", fillcolor=lightgreen];
+  node0 -> node7 [label="overcast"];
+}
